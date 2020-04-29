@@ -7,11 +7,11 @@ listint_t *s = list, *f = list;
 
 if (!list)
 return (0);
-while (s && f && f->next)
+while (f && f->next)
 {
-s = s->next->next;
-f = f->next;
-if (s == f->next)
+s = s->next;
+f = f->next->next;
+if (s == f)
 {
 return (1);
 }
