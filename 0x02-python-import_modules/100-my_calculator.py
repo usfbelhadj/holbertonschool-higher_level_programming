@@ -6,7 +6,6 @@ if __name__ == "__main__":
     if len(sys.argv) != 4:
         exit(1)
     arge = arg[1:]
-    print(arge)
     num1 = int(arge[0])
     num2 = int(arge[2])
     if arge[1] == '+':
