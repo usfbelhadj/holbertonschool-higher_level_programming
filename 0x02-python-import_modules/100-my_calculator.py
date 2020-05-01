@@ -10,13 +10,9 @@ if __name__ == "__main__":
     num2 = int(arge[2])
     if arge[1] == '+':
         print("{} + {} = {}".format(num1, num2, add(num1, num2)), end="\n")
-        exit(0)
-    if arge[1] == '-':
+    elif arge[1] == '-':
         print("{} - {} = {}".format(num1, num2, sub(num1, num2)), end="\n")
-        exit(0)
-    if arge[1] == '*':
+    elif arge[1] == '*':
         print("{} * {} = {}".format(num1, num2, mul(num1, num2)), end="\n")
-        exit(0)
-    if arge[1] == '/':
+    elif arge[1] == '/':
         print("{} / {} = {}".format(num1, num2, div(num1, num2)), end="\n")
-        exit(0)
