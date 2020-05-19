@@ -35,11 +35,11 @@ class Square:
         value: int
             value = new size of square
         raise = verify size
-            raise TypeError = The size Must be Integer
+            raise TypeError = size must be an integer
             raise ValueError = Size Must be Positive
         """
         if type(value) is not int:
-            raise TypeError("The size Must be Integer")
+            raise TypeError("size must be an integer")
         if not value >= 0:
             raise ValueError("size must be >= 0")
         self.__size = value
