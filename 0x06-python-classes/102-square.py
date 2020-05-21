@@ -47,17 +47,17 @@ class Square:
     def __eq__(self, other):
         return self.area() == other.area()
 
-    def __neq__(self, other):
+    def __ne__(self, other):
         return self.area() != other.area()
 
-    def __su__(self, other):
-        return self.area() < other.area()
-
-    def __inf__(self, other):
+    def __gt__(self, other):
         return self.area() > other.area()
 
-    def __eqsu__(self, other):
-        return self.area() <= other.area()
-
-    def __eqinf__(self, other):
+    def __ge__(self, other):
         return self.area() >= other.area()
+
+    def __lt__(self, other):
+        return self.area() < other.area()
+
+    def __le__(self, other):
+        return self.area() <= other.area()
