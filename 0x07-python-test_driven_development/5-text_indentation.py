@@ -18,3 +18,8 @@ def text_indentation(text):
             print(c.lstrip(), end="\n")
             c = ""
     print(text)
+    
+    
+if __name__ == "__main__":
+    import doctest
+    doctest.testfile("tests/0-add_integer.txt")
