@@ -1,0 +1,56 @@
+===============================
+The ``0-add_integer`` module
+===============================
+function called
+----------------
+``add_integer``
+----------------
+import function from module
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+Test Simple Calculation:
+
+    >>> add_integer(5,5)
+    10
+
+Test One Int:
+
+    >>> add_integer(0)
+    98
+
+Test Negative Integer
+
+    >>> add_integer(-1,-1)
+    -2
+
+Test Add Float:
+
+    >>> add_integer(1.5,1.5)
+    2
+
+Test One Float:
+
+    >>> add_integer(2.9)
+    100
+
+Test Int And Float:
+
+    >>> add_integer(2,2.3)
+    4
+
+Test Positive Negative Int:
+
+    >>> add_integer(5,-2)
+    3
+
+Test Negative Positive Int:
+
+    >>> add_integer(-2,4)
+    2
+
+Test two strings:
+
+    >>> add_integer("a", "b")
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
