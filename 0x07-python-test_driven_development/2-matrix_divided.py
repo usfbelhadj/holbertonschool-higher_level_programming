@@ -1,7 +1,14 @@
 #!/usr/bin/python3
+"""Module add_integer"""
 
 
 def matrix_divided(matrix, div):
+    """
+        Parameters
+        ----------
+        matrix: list
+        div: int
+        """
     if type(div) not in (int, float):
         raise TypeError("div must be a number")
     if div == 0:
