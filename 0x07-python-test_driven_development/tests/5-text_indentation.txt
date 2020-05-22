@@ -1,0 +1,54 @@
+===============================
+The ``5-text_indentation`` module
+===============================
+function called
+----------------
+``text_indentation``
+----------------
+import function from module
+   >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+
+Test Text Is string:
+
+    >>> text = "Hello. Youssef. Belhadj: 23? Holberton"
+    >>> text_indentation(text)
+    Hello.
+    Youssef.
+    Belhadj:
+    23?
+    Holberton
+
+Test Text Is Not string:
+
+    >>>text = 98
+    >>> text_indentation(text)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+
+The 'text_indentation' Module
+###########################################
+doctests for text_indentation
+###########################################
+using text_indentation
+
+import text_indentation from 5-text_indentation.py
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Expected TypeError if text is not a string
+
+    >>> text_indentation(45)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+Expected right answer
+
+    >>> text = "hello, my name is. Ihebbbbbb"
+    >>> text_indentation(text)
+    hello, my name is.
+    <BLANKLINE>
+    Ihebbbbbb
