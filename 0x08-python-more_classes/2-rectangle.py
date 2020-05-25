@@ -66,7 +66,7 @@ class Rectangle:
             size: int
                 size = size of Rectangle
         """
-        return self.__height * self.__width
+        return self.height * self.width
 
     def perimeter(self):
         """
@@ -76,4 +76,4 @@ class Rectangle:
             size: int
                 size = size of Rectangle
         """
-        return (self.__height * 2) + (self.__width * 2)
+        return (self.height * 2) + (self.width * 2)
