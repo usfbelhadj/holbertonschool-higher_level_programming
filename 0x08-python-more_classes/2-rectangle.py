@@ -61,19 +61,11 @@ class Rectangle:
     def area(self):
         """
         Area = area of Rectangle
-            Parameters
-            ----------
-            size: int
-                size = size of Rectangle
         """
-        return self.height * self.width
+        return self.width * self.height
 
     def perimeter(self):
         """
         Perimeter = perimeter of Rectangle
-            Parameters
-            ----------
-            size: int
-                size = size of Rectangle
         """
-        return (self.height * 2) + (self.width * 2)
+        return (self.height + self.width) * 2
