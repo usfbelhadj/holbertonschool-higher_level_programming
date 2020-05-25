@@ -8,6 +8,7 @@ class Rectangle:
     """number_of_instances:int"""
     print_symbol = '#'
     """print_symbol:str"""
+
     def __init__(self, width=0, height=0):
         """
         Parameters
