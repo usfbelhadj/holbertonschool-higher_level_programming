@@ -119,10 +119,4 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
-        '''square
-        Parameters
-        ----------
-        size: int
-            Rectangle Size
-        '''
         return cls(size, size)
