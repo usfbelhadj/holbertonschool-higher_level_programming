@@ -1,0 +1,46 @@
+===============================
+The ``1-my_list`` module
+===============================
+function called
+----------------
+``print_sorted`
+----------------
+import function from module
+    >>> print_sorted = __import__('1-my_list').print_sorted
+
+
+Test Sorted List:
+
+    >>> my_list = MyList([1,2,0,100,7])
+    >>> my_list.print_sorted()
+    [1,2,0,100,7]
+
+Test Class Type:
+
+    >>> my_list = MyList()
+    >>> print(type(my_list) == MyList)
+    True
+
+Test List Type:
+
+    >>> my_list = MyList()
+    >>> isinstance(my_list, list)
+    True
+Test Empty List:
+
+    >>> my_list = MyList()
+    >>> my_list.print_sorted()
+    []
+
+Test Negative List:
+
+    >>> my_list = MyList([-1,-2,-0,-100,-7])
+    >>> my_list.print_sorted()
+    [-100, -7, -2, -1, 0]
+
+Test Append To a List:
+
+    >>> my_list = MyList()
+    >>> my_list.append(4)
+    >>> my_list.print_sorted()
+    [4]
