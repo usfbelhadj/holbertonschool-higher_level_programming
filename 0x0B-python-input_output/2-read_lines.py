@@ -12,4 +12,4 @@ def read_lines(filename="", nb_lines=0):
             print(f.read(), end='')
         else:
             for line in range(nb_lines):
-                print(f.readline())
+                print(f.readline(), end='')
