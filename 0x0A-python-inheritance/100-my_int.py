@@ -10,4 +10,4 @@ class MyInt(int):
 
     def __ne__(self, num):
         '''Reverse ne'''
-        return not int(self) != int(num)
+        return int(self) == int(num)
