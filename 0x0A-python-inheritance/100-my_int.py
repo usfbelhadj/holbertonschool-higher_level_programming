@@ -3,11 +3,11 @@
 
 
 class MyInt(int):
-    def __init__(self, num):
-        self.num = num
 
-    def controle(self):
-        if self.num == num:
-            return False
-        else:
-            return True
+    def __eq__(self, num):
+        '''Reverse eq'''
+        return int(self) != int(num)
+
+    def __ne__(self, num):
+        '''Reverse ne'''
+        return not int(self) != int(num)
