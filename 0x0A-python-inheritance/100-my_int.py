@@ -3,7 +3,6 @@
 
 
 class MyInt(int):
-
     def __eq__(self, num):
         '''Reverse eq'''
         return int(self) != int(num)
