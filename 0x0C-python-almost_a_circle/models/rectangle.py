@@ -80,15 +80,15 @@ class Rectangle(Base):
         return ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
                 self.x, self.y, self.width, self.height))
 
-    def update(self, id=None, width=None, height=None, x=None, y=None):
-        '''Update'''
-        if id is not None:
-            self.id = id
-        if width is not None:
-            self.width = width
-        if height is not None:
-            self.height = height
-        if x is not None:
-            self.x = x
-        if y is not None:
-            self.y = y
+    def update(self, *args, **kwargs):
+        '''Update with kwargs'''
+        attribute_list = ["id", "width", "height", "x", "y"]
+        if args is not None:
+            for i in range(len(args)):
+                if i >= len(attribute_list):
+                    break
+                setattr(self, attribute_list[i], args[i])
+        if args is None or len(args) == 0:
+            for key, value in kwargs.items():
+                if key in attribute_list:
+                    setattr(self, key, value)
