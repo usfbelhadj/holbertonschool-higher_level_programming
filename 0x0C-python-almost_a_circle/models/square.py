@@ -23,3 +23,16 @@ class Square(Rectangle):
         self.validation("width", value, False)
         self.width = value
         self.heigth = value
+
+    def update(self, *args, **kwargs):
+        '''Update with kwargs'''
+        attribute_list = ["id", "size", "x", "y"]
+        if args is not None:
+            for i in range(len(args)):
+                if i >= len(attribute_list):
+                    break
+                setattr(self, attribute_list[i], args[i])
+        if args is None or len(args) == 0:
+            for key, value in kwargs.items():
+                if key in attribute_list:
+                    setattr(self, key, value)
