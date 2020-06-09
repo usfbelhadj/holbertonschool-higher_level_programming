@@ -6,6 +6,7 @@ from models.base import Base
 class Rectangle(Base):
     '''Class Rectangle'''
     def __init__(self, width, height, x=0, y=0, id=None):
+        '''Constructor'''
         super().__init__(id)
         self.width = width
         self.height = height
@@ -49,6 +50,7 @@ class Rectangle(Base):
         self.__y = value
 
     def validation(self, name, value, bool=True):
+        '''Function for validating the value'''
         if type(value) is not int:
             raise TypeError("{} must be an integer".format(name))
         if bool and value < 0:
@@ -57,14 +59,36 @@ class Rectangle(Base):
             raise ValueError("{} must be > 0".format(name))
 
     def area(self):
+        '''area of this rectangle'''
         return self.width * self.height
 
     def display(self):
-        for i in range(self.height):
-            for j in range(self.width):
-                print('#', end='')
-            print()
+        '''representation of this rectangle'''
+        if self.y != 0:
+            p = self.y - 1
+            print('\n' * p)
+            for i in range(self.height):
+                print((' ' * self.x) + ('#' * self.width), end='')
+                print()
+        else:
+            for i in range(self.height):
+                print((' ' * self.x) + ('#' * self.width), end='')
+                print()
 
     def __str__(self):
+        '''info about this rectangle'''
         return ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
                 self.x, self.y, self.width, self.height))
+
+    def update(self, id=None, width=None, height=None, x=None, y=None):
+        '''Update'''
+        if id is not None:
+            self.id = id
+        if width is not None:
+            self.width = width
+        if height is not None:
+            self.height = height
+        if x is not None:
+            self.x = x
+        if y is not None:
+            self.y = y
