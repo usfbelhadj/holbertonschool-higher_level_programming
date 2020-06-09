@@ -92,3 +92,7 @@ class Rectangle(Base):
             for key, value in kwargs.items():
                 if key in attribute_list:
                     setattr(self, key, value)
+
+    def to_dictionary(self):
+        return {'x': self.x, 'y': self.y, 'id': self.id
+                , 'height': self.height, 'width': self.width}
