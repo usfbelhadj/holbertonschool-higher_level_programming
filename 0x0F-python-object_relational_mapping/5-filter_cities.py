@@ -13,6 +13,7 @@ if __name__ == '__main__':
     password = argv[2]
     database = argv[3]
     match = argv[4]
+    cities = []
 
     db = MySQLdb.connect(
             host="localhost",
@@ -29,6 +30,7 @@ if __name__ == '__main__':
     ORDER BY cities.id""", (match,))
     rows = cursor.fetchall()
     for row in rows:
-        print(", ".join([row[1]]))
+        cities.append(row[1])
+    print(', '.join(cities))
     cursor.close()
     db.close()
