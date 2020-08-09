@@ -11,7 +11,6 @@ if __name__ == '__main__':
     user = argv[1]
     password = argv[2]
     database = argv[3]
-    match = argv[4]
 
     db = MySQLdb.connect(
             host="localhost",
