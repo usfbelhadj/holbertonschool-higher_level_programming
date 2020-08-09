@@ -26,7 +26,7 @@ if __name__ == '__main__':
     cursor.execute("""SELECT cities.id, cities.name, states.name
     FROM cities INNER JOIN states ON cities.state_id = states.id
     WHERE states.name=%s
-    ORDER BY cities.id ASC""", match)
+    ORDER BY cities.id ASC""", (match))
     rows = cursor.fetchall()
     for row in rows:
         print(", ".join([row[1]]))
