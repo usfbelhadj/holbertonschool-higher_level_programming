@@ -24,7 +24,7 @@ if __name__ == '__main__':
 
     cursor = db.cursor()
     cursor.execute("""SELECT * FROM states WHERE BINARY match ='{}'
-                    ORDER BY id ASC""".format(match))
+                    ORDER BY id""".format(match))
     rows = cursor.fetchall()
     for row in rows:
         print(row)
