@@ -3,7 +3,6 @@
 script that lists all State objects from the database hbtn_0e_6_usa
 """
 
-
 import sys
 from model_state import Base, State
 from sqlalchemy import create_engine
@@ -19,7 +18,7 @@ if __name__ == "__main__":
                            (user, password, database), pool_pre_ping=True)
     Base.metadata.create_all(engine)
 
-    session = Session(engine)
+    session = Session()
     states = session.query(State).order_by(State.id.asc()).all()
 
     for state in states:
