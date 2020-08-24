@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-'''Write a Python script that takes in a URL and an email, sends a POST request'''
+'''URL and an email sends a POST request'''
 from urllib import request, parse
 import sys
 if __name__ == "__main__":
