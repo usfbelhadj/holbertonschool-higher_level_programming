@@ -4,14 +4,11 @@ First constant, first print
 */
 'use strict';
 
-const num = process.argv[2];
-let i;
-let sum = 1;
-if (num === 0 || num === 1) {
-  console.log(sum);
-} else {
-  for (i = num; i >= 1; i--) {
-    sum = sum * i;
+function fac (num) {
+  if (isNaN(num) || num < 2) {
+    return 1;
+  } else {
+    return num * fac(num - 1);
   }
-  console.log(sum);
 }
+console.log(fac(process.argv[2]));
