@@ -10,5 +10,5 @@ if (myArgs < 3) {
 } else if (myArgs === 3) {
   console.log('Argument found');
 } else {
-  console.log('Argument found');
+  console.log('Arguments found');
 }
