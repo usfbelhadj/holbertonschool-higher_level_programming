@@ -7,5 +7,5 @@ First constant, first print
 const myArr = ['C is fun', 'Python is cool', 'Javascript is amazing'];
 let i;
 for (i = 0; i < myArr.length; i++) {
-    console.log(myArr[i]); 
+  console.log(myArr[i]);
 }
