@@ -4,7 +4,7 @@ First constant, first print
 */
 'use strict';
 
-var myArgs = process.argv.length;
+const myArgs = process.argv.length;
 if (myArgs < 3) {
   console.log('No argument');
 } else if (myArgs === 3) {
