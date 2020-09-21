@@ -5,3 +5,5 @@ class Rectangle
 'use strict';
 
 class Rectangle {}
+
+module.exports = Rectangle;
