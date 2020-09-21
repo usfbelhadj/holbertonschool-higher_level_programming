@@ -10,8 +10,7 @@ class Rectangle {
       this.width = w;
       this.height = h;
     } else {
-      Rectangle.width = w;
-      Rectangle.height = h;
+      Rectangle === {}
     }
   }
 }
