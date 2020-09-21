@@ -3,7 +3,8 @@
 class Rectangle
 */
 'use strict';
-let i, j;
+
+let i;
 class Rectangle {
   constructor (w, h) {
     this.width = w;
