@@ -2,7 +2,6 @@
 /*
 class Rectangle
 */
-'use strict';
 const Rectangle = require('./4-rectangle');
 
 class Square extends Rectangle {
