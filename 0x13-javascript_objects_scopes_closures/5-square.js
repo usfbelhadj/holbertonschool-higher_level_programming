@@ -1,6 +1,6 @@
 #!/usr/bin/node
 /*
-class Rectangle
+class Square
 */
 const Rectangle = require('./4-rectangle');
 
